@@ -276,3 +276,6 @@ body.has-cosplay-lightbox {
     object-position: center bottom;
   }
 }
+
+/* Toolkit lists tools used, without a proficiency rating. */
+.tool-chip { grid-template-rows: auto 68px; }
