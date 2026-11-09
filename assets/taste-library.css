@@ -12,4 +12,4 @@ body.taste-open{overflow:hidden}.taste-dialog{position:fixed;inset:0;width:min(8
 
 .tl-delete{color:#a13d3d;border-color:#e6c8c8}.tl-row:has(.tl-delete){flex-wrap:wrap}.tl-row:has(.tl-delete) .tl-copy{min-width:120px}
 
-.tl-open{padding:14px 24px;min-height:48px;border:1px solid #a74132;border-radius:10px;background:#b94c3b;color:#fff;font-size:15px;font-weight:700;box-shadow:0 5px 14px #b94c3b26;transition:background .15s,box-shadow .15s}.tl-open:hover{background:#9f3e30;box-shadow:0 6px 18px #b94c3b38}.tl-open:focus-visible{outline:3px solid #17323d;outline-offset:4px}
+.tl-open{padding:13px 22px;min-height:48px;border:1px solid var(--mint-deep,#269d88);border-radius:0;background:var(--mint,#63cbb7);color:var(--ink,#152f3a);font-size:14px;font-weight:700;box-shadow:none;transition:background .15s}.tl-open:hover{background:var(--mint-pale,#dff4ed)}.tl-open:focus-visible{outline:2px solid var(--mint-deep,#269d88);outline-offset:4px}
