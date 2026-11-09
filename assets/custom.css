@@ -279,3 +279,11 @@ body.has-cosplay-lightbox {
 
 /* Toolkit lists tools used, without a proficiency rating. */
 .tool-chip { grid-template-rows: auto 68px; }
+
+/* Compact counter: absolute positioning leaves the hero layout unchanged. */
+.hero-annotation.home-views { gap: 3px; padding: 10px 13px; }
+.home-views .home-views-label { font-size: 8px; letter-spacing: .14em; }
+.home-views .home-views-total { display:flex; align-items:baseline; gap:5px; font-size:18px; line-height:1.2; font-variant-numeric:tabular-nums; }
+.home-views-total small { font-size:9px; font-weight:400; }
+.home-views .home-views-caption { font-size:8px; letter-spacing:0; }
+.home-views-preview { font-size:7px; color:var(--ink-soft); }
