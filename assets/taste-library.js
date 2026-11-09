@@ -91,6 +91,6 @@
  }
  dialog.addEventListener('close',()=>{if(edit)cancelEdit();document.body.classList.remove('taste-open');if(opener?.isConnected)opener.focus();});
  function open(event){opener=event.currentTarget;renderTabs();refreshGenres();renderList();dialog.showModal();document.body.classList.add('taste-open');dialog.scrollTop=0;}
- function attach(){const content=document.querySelector('.interest-content');if(content&&!content.querySelector('.tl-open'))content.append(button('나의 아카이브 - 업데이트 중',open,'tl-open'));}
+ function attach(){const content=document.querySelector('.interest-content');if(content&&!content.querySelector('.tl-open'))content.append(button('나의 아카이브 - 업데이트 중',open,'tl-open'));const anime=document.querySelector('.anime-card .hobby-feature-copy');if(anime&&!anime.querySelector('.tl-open'))anime.append(button('나의 아카이브 - 업데이트 중',event=>{type='시리즈·애니';query='';search.value='';genre='전체 장르';sort='rating';favorite=false;heartFilter.setAttribute('aria-pressed','false');open(event);},'tl-open tl-open-anime'));}
  new MutationObserver(attach).observe(document.getElementById('root'),{childList:true,subtree:true});attach();
 })();
