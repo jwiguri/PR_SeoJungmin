@@ -15,7 +15,7 @@
  const button=(text,fn,cls='tl-button')=>{const n=el('button',cls,text);n.type='button';n.onclick=fn;return n;};
  const link=(text,url,cls)=>{const a=el('a',cls,text);if(/^https:\/\/(pedia\.watcha\.com|steamcommunity\.com)\//.test(url||'')){a.href=url;a.target='_blank';a.rel='noopener noreferrer';}return a;};
  const dialog=el('dialog','taste-dialog');dialog.setAttribute('aria-labelledby','taste-title');document.body.append(dialog);
- const head=el('header','tl-head'),heading=el('div'),title=el('h2','','나의 아카이브');title.id='taste-title';
+ const head=el('header','tl-head'),heading=el('div'),title=el('h2','','나의 아카이브 - 업데이트 중');title.id='taste-title';
  heading.append(el('small','','PLAYER’S ARCHIVE'),title,el('p','','플레이한 게임과 감상한 영화·시리즈, 읽은 책을 정리했습니다.'));
  const close=button('×',()=>dialog.close(),'tl-close');close.setAttribute('aria-label','닫기');head.append(heading,close);dialog.append(head);
  const notice=el('p','tl-notice');dialog.append(notice);
@@ -91,6 +91,6 @@
  }
  dialog.addEventListener('close',()=>{if(edit)cancelEdit();document.body.classList.remove('taste-open');if(opener?.isConnected)opener.focus();});
  function open(event){opener=event.currentTarget;renderTabs();refreshGenres();renderList();dialog.showModal();document.body.classList.add('taste-open');dialog.scrollTop=0;}
- function attach(){const content=document.querySelector('.interest-content');if(content&&!content.querySelector('.tl-open'))content.append(button('나의 아카이브',open,'tl-open'));}
+ function attach(){const content=document.querySelector('.interest-content');if(content&&!content.querySelector('.tl-open'))content.append(button('나의 아카이브 - 업데이트 중',open,'tl-open'));}
  new MutationObserver(attach).observe(document.getElementById('root'),{childList:true,subtree:true});attach();
 })();
